@@ -44,7 +44,8 @@ jobs:
         python3 -m venv venv
         source venv/bin/activate
         pip install --upgrade pip wheel setuptools
-        pip install buildozer==1.6.0 cython==0.29.37
+        pip install git+https://github.com/kivy/buildozer.git@master cython==0.29.37
+
 
     - name: Ensure local recipes folder exists
       run: |

@@ -12,7 +12,7 @@ requirements = python3,kivy,pyjnius,numpy,matplotlib,pillow,requests
 p4a.fork = kivy
 bootstrap = sdl2
 
-icon.filename = icon.png
+icon.filename = icone.png
 android.archs = arm64-v8a, armeabi-v7a
 
 orientation = portrait

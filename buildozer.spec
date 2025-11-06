@@ -11,6 +11,8 @@ version = 0.1
 requirements = python3,kivy,pyjnius,numpy,matplotlib,pillow,requests
 p4a.fork = kivy
 bootstrap = sdl2
+p4a.local_recipes = %(cwd)s/recipes
+p4a.python_version = 3.11
 
 icon.filename = icone.png
 android.archs = arm64-v8a, armeabi-v7a

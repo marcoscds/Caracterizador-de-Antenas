@@ -8,7 +8,7 @@ version = 0.1
 
 requirements = python3,kivy,numpy,matplotlib,pillow,pyjnius,requests
 
-p4a.local_recipes = %(cwd)s/recipes 
+p4a.local_recipes = recipes 
 p4a.branch = develop
 p4a.bootstrap = sdl2
 p4a.python_version = 3.10

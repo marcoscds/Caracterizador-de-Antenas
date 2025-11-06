@@ -44,8 +44,7 @@ jobs:
         python3 -m venv venv
         source venv/bin/activate
         pip install --upgrade pip wheel setuptools
-        pip install git+https://github.com/kivy/buildozer.git@master cython==0.29.37
-
+        pip install buildozer==1.5.0 cython==0.29.37
 
     - name: Ensure local recipes folder exists
       run: |
@@ -57,6 +56,11 @@ jobs:
         if [ ! -f icone.png ]; then
           convert -size 512x512 xc:blue -gravity center -pointsize 72 -fill white -annotate +0+0 "A" icone.png || true
         fi
+
+    - name: Install Android SDK components
+      run: |
+        yes | sdkmanager --sdk_root=$HOME/.buildozer/android/platform/android-sdk \
+          "platform-tools" "build-tools;33.0.2" "platforms;android-33" || true
 
     - name: Build APK
       run: |
@@ -79,5 +83,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug-apk
-        path: bin/*.apk
+        path: |
+          bin/*.apk
+          .buildozer/android/platform/build-*/dists/*/bin/*.apk
         if-no-files-found: warn

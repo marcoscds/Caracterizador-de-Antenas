@@ -1,20 +1,17 @@
-# Importa a classe da receita original do python-for-android
-# Nota: O nome da classe deve ser MatplotlibRecipe
 from pythonforandroid.recipes.matplotlib import MatplotlibRecipe
 
-# Cria uma classe que herda a receita original
-# Isso garante que todas as etapas de compilação originais sejam mantidas
 class FixedMatplotlibRecipe(MatplotlibRecipe):
-    
-    # Esta linha é a correção crucial! 
-    # Ela garante que a biblioteca C++ compartilhada (libc++_shared.so)
-    # seja empacotada no APK, resolvendo o erro 'cannot locate symbol'.
+    # Corrige o empacotamento da libc++_shared.so
     need_stl_shared = True
-    
-    # Opcional: Você pode manter o nome original da receita, mas usando
-    # uma classe diferente, você pode garantir que o P4A use a sua.
-    name = 'matplotlib'
 
-# Você deve definir uma variável 'recipe' que aponta para a sua classe
-# Essa variável é o ponto de entrada que o Python-for-Android usa.
+    # Força backend sem interface gráfica (necessário para Android)
+    def get_recipe_env(self, arch=None, **kwargs):
+        env = super().get_recipe_env(arch, **kwargs)
+        env["MPLBACKEND"] = "Agg"  # evita dependência em tkinter ou qt
+        env["MATPLOTLIBRC"] = "/data/data/org.kivy.matplotlib/matplotlibrc"
+        return env
+
+    # Nome interno da recipe (opcional, mas útil)
+    name = "matplotlib"
+
 recipe = FixedMatplotlibRecipe()

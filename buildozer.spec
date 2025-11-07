@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
-requirements = python3,kivy,numpy,matplotlib,pillow,pyjnius,requests
+requirements = python3,kivy,numpy,matplotlib==3.7.2,pillow,pyjnius,requests
 
 p4a.local_recipes = recipes 
 p4a.branch = develop

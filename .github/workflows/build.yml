@@ -26,7 +26,7 @@ jobs:
           zlib1g-dev libncurses5-dev libncurses6 libstdc++6 \
           libffi-dev libssl-dev libtinfo6 \
           autoconf automake libtool pkg-config m4 build-essential \
-          libltdl-dev ccache imagemagick
+          libltdl-dev ccache imagemagick make gcc g++
         sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5 || true
 
     - name: Cache Buildozer
@@ -56,12 +56,18 @@ jobs:
         if [ ! -f icone.png ]; then
           convert -size 512x512 xc:blue -gravity center -pointsize 72 -fill white -annotate +0+0 "A" icone.png || true
         fi
+        
 
     - name: Install Android SDK components
       run: |
         yes | sdkmanager --sdk_root=$HOME/.buildozer/android/platform/android-sdk \
           "platform-tools" "build-tools;33.0.2" "platforms;android-33" || true
-
+    
+    - name: Verify toolchain
+      run: |
+        make --version
+        gcc --version
+        
     - name: Build APK
       run: |
         source venv/bin/activate

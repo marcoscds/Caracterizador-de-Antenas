@@ -10,7 +10,6 @@ class HarfbuzzPatchedRecipe(Recipe):
         env = self.get_recipe_env(arch)
         env["CFLAGS"] += " -Wno-error=cast-function-type-strict"
         env["CXXFLAGS"] += " -Wno-error=cast-function-type-strict"
-        shprint(sh.autoconf)
         shprint(sh.configure, "--with-freetype", _env=env)
         shprint(sh.make, "-j4", _env=env)
 

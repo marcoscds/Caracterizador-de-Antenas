@@ -13,7 +13,6 @@ p4a.branch = develop
 p4a.bootstrap = sdl2
 p4a.python_version = 3.10
 p4a.extra_env_vars = CFLAGS=-std=c++17
-p4a.python_version = 3.10
 
 
 android.archs = arm64-v8a,armeabi-v7a 

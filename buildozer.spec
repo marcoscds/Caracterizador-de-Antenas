@@ -18,7 +18,8 @@ p4a.extra_env_vars = CFLAGS=-std=c++17
 android.archs = arm64-v8a,armeabi-v7a 
 android.api = 33
 android.minapi = 26
-android.ndk = 27
+android.ndk = 26b
+
 
 icon.filename = icone.png
 orientation = portrait

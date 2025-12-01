@@ -28,7 +28,7 @@ android.permissions = INTERNET,BLUETOOTH,BLUETOOTH_ADMIN,BLUETOOTH_CONNECT,BLUET
 # API e NDK
 android.api = 31
 android.minapi = 24
-android.ndk = 23b
+android.ndk = 25b
 android.ndk_api = 24
 
 # Armazenamento

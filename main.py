@@ -1,7 +1,6 @@
 import os
 import threading
-import numpy as np # type: ignore
-import matplotlib.pyplot as plt # type: ignore
+
 
 from kivy.app import App
 from kivy.uix.image import Image
@@ -358,6 +357,8 @@ class MotorControlScreen(Screen):
            Retorna a figura (plt.gcf())
         """
         global reference_power 
+        import numpy as np # type: ignore
+        import matplotlib.pyplot as plt # type: ignore
         
         # O cálculo do Ganho Normalizado e o fechamento do loop são os mesmos
         reference_power = np.max(powers) 
@@ -488,6 +489,8 @@ class MotorControlScreen(Screen):
 
     def _perform_save(self, path, filename):
         """Salva a figura no caminho e nome de arquivo especificados. (Sem alteração no corpo)"""
+        import numpy as np # type: ignore
+        import matplotlib.pyplot as plt # type: ignore
         try:
             fig = plt.gcf()
             if not filename.lower().endswith(('.png', '.pdf')):

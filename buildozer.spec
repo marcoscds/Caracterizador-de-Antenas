@@ -44,13 +44,13 @@ android.permissions = INTERNET,BLUETOOTH,BLUETOOTH_ADMIN,BLUETOOTH_CONNECT,BLUET
 android.api = 31
 
 # (int) Minimum API your APK / AAB will support.
-android.minapi = 21
+android.minapi = 24
 
 # (str) Android NDK version to use
 android.ndk = 25b
 
 # (int) Android NDK API to use
-android.ndk_api = 21
+android.ndk_api = 24
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 android.private_storage = True

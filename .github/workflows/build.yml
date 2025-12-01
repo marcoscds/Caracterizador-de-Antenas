@@ -32,6 +32,11 @@ jobs:
           libltdl-dev ccache
         sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5 || true
 
+    - name: Install latest python-for-android
+      run: |
+        pip install --upgrade pip
+        pip install https://github.com/kivy/python-for-android/archive/develop.zip
+
     # 4️⃣ Cache do Buildozer para acelerar builds
     - name: Cache Buildozer
       uses: actions/cache@v3

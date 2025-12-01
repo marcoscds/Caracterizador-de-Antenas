@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             buildozer-
 
-      - name: Setup Buildozer + python-for-android (DEVELOP)
+      - name: Setup Buildozer + python-for-android
         run: |
           python3 -m venv venv
           source venv/bin/activate

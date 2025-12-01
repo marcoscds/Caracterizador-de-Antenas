@@ -68,7 +68,7 @@ android.allow_backup = True
 # p4a.bootstrap = sdl2
 
 # (str) python-for-android branch to use
-p4a.branch = master
+p4a.branch = develop
 
 
 [buildozer]

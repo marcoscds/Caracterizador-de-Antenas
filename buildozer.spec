@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = Antenas
+title = Caracterizador de Antenas
 
 # (str) Package name
 package.name = antenasapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.elaineinacio
+package.domain = org.marcossilva
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -26,7 +26,7 @@ requirements = python3,kivy==2.2.1,numpy==1.23.5,matplotlib==3.6.3,setuptools,pi
 #presplash.filename = %(source.dir)s/Splash.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/Icon.png
+icon.filename = icone.png
 
 # (list) Supported orientations
 orientation = portrait

@@ -50,8 +50,6 @@ jobs:
         source venv/bin/activate
         pip install --upgrade pip wheel setuptools
         pip install buildozer==1.5.0 cython==0.29.36
-		pip install https://github.com/kivy/python-for-android/archive/develop.zip
-        pip install buildozer==1.5.0
 
     # 6️⃣ Cria imagens placeholder se não existirem
     - name: Create placeholder images

@@ -32,10 +32,7 @@ jobs:
           libltdl-dev ccache
         sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5 || true
 
-    - name: Install latest python-for-android
-      run: |
-        pip install --upgrade pip
-        pip install https://github.com/kivy/python-for-android/archive/develop.zip
+
 
     # 4️⃣ Cache do Buildozer para acelerar builds
     - name: Cache Buildozer
@@ -55,6 +52,8 @@ jobs:
         source venv/bin/activate
         pip install --upgrade pip wheel setuptools
         pip install buildozer==1.5.0 cython==0.29.36
+        pip install https://github.com/kivy/python-for-android/archive/develop.zip
+
 
     # 6️⃣ Cria imagens placeholder se não existirem
     - name: Create placeholder images

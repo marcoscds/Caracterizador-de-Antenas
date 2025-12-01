@@ -20,7 +20,7 @@ version = 0.1
 
 # (list) Application requirements
 # Versões específicas para evitar conflitos
-requirements = python3==3.10.14,kivy==2.3.0,setuptools,pillow,pyjnius
+requirements = python3,kivy==2.2.1,numpy==1.23.5,matplotlib==3.6.3,setuptools,pillow,pyjnius,requests
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/Splash.png
@@ -68,7 +68,7 @@ android.allow_backup = True
 # p4a.bootstrap = sdl2
 
 # (str) python-for-android branch to use
-p4a.branch = master
+p4a.branch = v2024.08
 
 
 [buildozer]

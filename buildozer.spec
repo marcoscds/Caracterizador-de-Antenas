@@ -11,7 +11,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # Requisitos (versões compatíveis com p4a e NDK 23b)
-requirements = python3,kivy==2.2.1,numpy==1.21.5,matplotlib,setuptools,pillow,pyjnius,requests
+requirements = python3,kivy==2.2.1,numpy==1.21.4,matplotlib,setuptools,pillow,pyjnius,requests
 
 # Ícone e presplash
 icon.filename = icone.png

@@ -11,7 +11,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # Requisitos (versões compatíveis com p4a e NDK 23b)
-requirements = python3,kivy==2.2.1,numpy==1.19.5,matplotlib,setuptools,pillow,pyjnius,requests
+requirements = python3,kivy==2.2.1,numpy,matplotlib,setuptools,pillow,pyjnius,requests
 
 # Ícone e presplash
 icon.filename = icone.png
@@ -40,6 +40,11 @@ android.allow_backup = True
 # Bootstrap e branch p4a
 p4a.bootstrap = sdl2
 p4a.branch = develop
+
+[p4a]
+git_url = https://github.com/kivy/python-for-android.git
+git_branch = master
+
 
 [buildozer]
 log_level = 2

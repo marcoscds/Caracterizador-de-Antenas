@@ -11,7 +11,8 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # Requisitos (versões compatíveis com p4a e NDK 23b)
-requirements = python3,kivy==2.2.1,numpy,matplotlib,setuptools,pillow,pyjnius,requests
+requirements = python3,kivy==2.2.1,numpy@https://github.com/vrenken/numpy-android/archive/refs/tags/v1.26.4.zip,matplotlib,setuptools,pillow,pyjnius,requests
+
 
 # Ícone e presplash
 icon.filename = icone.png
